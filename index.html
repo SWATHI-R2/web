@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SIGN IN</title>
+
+
+    <style>      
+                                                       
+        input {
+            height: 20px;                                                   /*USED TO SET THE HEIGHT OF INPUT TAG(TEXTBOX)*/
+        }
+        form {
+            background-color: rgba(226, 226, 226, 0.685);
+            padding: 50px;
+            border-radius: 20px;
+            width: fit-content;
+            margin: auto;
+        }
+       
+        button {
+            padding: 10px 20px;
+            border:2px solid grey;
+            border-radius:5px;                                 /* USED FOR CURVE IN THE BUTTON*/
+            background-color:rgb(102, 102, 102);              /*BG COLOR OF BUTTON */      
+            color: white;                                     /*FONT COLOR OF TEXT INSIDE THE BUTTON */
+            font-size:15px;                                     /*FONT SIZE OF TEXT INSIDE THE BUTTON*/
+        }
+        button:hover{
+            background-color: rgb(62, 153, 62);
+        }
+        body{
+            background-image: url('https://mooc.tce.edu/pluginfile.php/2/course/section/202/MOOC-Courses-Homepage-BG.jpeg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: max-content;
+        }  
+
+
+    </style>
+
+
+</head>
+<body style="text-align: center;margin-top: 50px;font-size: 20px;">        <!-- USED FOR ALIGNMENT OF CINTENTS IN THE CENTRE OF THE WEBPAGE -->
+    <h2>TCE CAREER GUIDANCE</h2>
+    <form>
+        <label><b>NAME :   </b> </label>
+        <input id = "name" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b>EMAIL ID :   </b> </label>
+        <input id = "emailid" type = "text" placeHolder = "">
+        <br>
+        <br>
+        
+        <label><b>PHONE NUMBER :    </b></label>
+        <input id = "phone_no" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b> COURSE :    </b></label>
+        <input id = "course" type = "text" placeHolder = "">
+        <br>
+        <br>
+    
+        <label><b>YEAR :    </b></label>
+        <input id = "year" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b>DEPARTMENT :   </b> </label>
+        <input id = "dept" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b>ROLL NO :   </b> </label>
+        <input id = "rollno" type = "text" placeHolder = "">
+        <br>
+        <br>
+         
+
+        
+        <button onClick = "report()" id ="b1">SUBMIT</button>
+          
+    </form>
+   
+   
+        <script type= "text/javascript">
+           
+  
+            function number_check(s){
+                if(isNaN(s)){
+                    console.log("true")
+                    return true;
+                }else{
+                    console.log("False")
+                    return false;
+                }
+            }
+                function report(){
+                    var Name=document.getElementById("name").value;
+                    var Emailid= document.getElementById("emailid").value;
+                    var Phone_no= document.getElementById("phone_no").value;
+                    var Course= document.getElementById("course").value;
+                 
+                    var Year= document.getElementById("year").value;
+                    var Dept= document.getElementById("dept").value;
+                    var Rollno= document.getElementById("rollno").value;
+                    console.log(Phone_no)
+                    if ((Name=="")||(Emailid=="")||(Phone_no=="")||(Course=="")||(Year=="")||(Dept=="")|| (Rollno==""))
+                        alert("PLEASE FILL ALL THE DETAILS...")
+                    else{
+                     
+
+                        if((Phone_no.length!=10)||(number_check(Phone_no))){
+                            alert("INVALID PHONE NUMBER ")
+                            return
+                        }
+                      
+
+                        if(number_check(Year)){
+                            alert("YEAR FIELD CAN'T CONTAIN CHARACTERS...")
+                            return;
+                        }   
+                        
+                        if(number_check(Rollno)){
+                            alert("ROLLNO FIELD CAN'T CONTAIN CHARACTERS...")
+                            return;
+                        }
+                           
+             
+
+                        alert("SUCCESFULLY SIGNED IN!!! .........")
+                        var i=1;
+                        }
+                       if(i)
+                         window.open('https://swathi-r2.github.io/webapthonhome/')
+ }      
+                    
+ </script>
+   
+   
+</body>
+
+</html>
